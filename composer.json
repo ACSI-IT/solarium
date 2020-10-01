@@ -1,5 +1,5 @@
 {
-    "name": "solarium/solarium",
+    "name": "acsi/solarium",
     "type": "library",
     "description": "PHP Solr client",
     "keywords": ["solr", "search", "php"],
