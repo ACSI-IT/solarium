@@ -178,11 +178,11 @@ class Document extends AbstractDocument
      *
      * @return self
      */
-    public function __set($name, $value): DocumentInterface
+    public function __set($name, $value): void
     {
         $this->setField($name, $value);
 
-        return $this;
+        //return $this;
     }
 
     /**
@@ -194,11 +194,11 @@ class Document extends AbstractDocument
      *
      * @return self
      */
-    public function __unset($name): self
+    public function __unset($name): void
     {
         $this->removeField($name);
 
-        return $this;
+        //return $this;
     }
 
     /**

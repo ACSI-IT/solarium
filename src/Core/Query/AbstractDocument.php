@@ -22,14 +22,6 @@ abstract class AbstractDocument implements DocumentInterface, \IteratorAggregate
     protected $fields;
 
     /**
-     * @param mixed $name
-     * @param mixed $value
-     *
-     * @return \Solarium\Core\Query\DocumentInterface
-     */
-    abstract public function __set($name, $value): DocumentInterface;
-
-    /**
      * Get field value by name.
      *
      * Magic access method for accessing fields as properties of this document
@@ -123,12 +115,10 @@ abstract class AbstractDocument implements DocumentInterface, \IteratorAggregate
     }
 
     /**
-     * ArrayAccess implementation.
-     *
      * @param mixed $offset
-     *
      * @return mixed|null
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return $this->__get($offset);
